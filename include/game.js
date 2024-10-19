@@ -34,6 +34,7 @@ function startGame() {
 }
 
 function nextWord(actualIndex) {
+    document.getElementById('inputWord' + actualIndex).value = document.getElementById('inputWord' + actualIndex).value.toUpperCase();
     if ((actualIndex + 1) == (pickedWord.length - 1)) {
         guessWord();
     } else {

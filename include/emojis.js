@@ -2,7 +2,7 @@ const emojis = [
     {
         "emoji": "👨‍💻💻",
         "word": "CODER",
-        "hint": ""
+        "hint": "Person/Profession"
     },
     {
         "emoji": "🍎📱",
@@ -11,7 +11,7 @@ const emojis = [
     },
     {
         "emoji": "🐍📄",
-        "word": "PHYTON",
+        "word": "PYTHON",
         "hint": "Programming language"
     },
     {
