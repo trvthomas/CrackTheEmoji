@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html data-theme="dark">
+
+<head>
+    <title>Crack The Emoji for CS Club</title>
+
+    <meta name="description" content="PENDING">
+    <link rel="stylesheet" href="include/bulma-styling.css">
+    <link rel="stylesheet" href="include/styling.css">
+
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+
+    <link href="https://trvsolutions-customer-resources.s3.amazonaws.com/fontawesome-icons/css/fontawesome.min.css"
+        rel="stylesheet">
+    <link href="https://trvsolutions-customer-resources.s3.amazonaws.com/fontawesome-icons/css/brands.min.css"
+        rel="stylesheet">
+    <link href="https://trvsolutions-customer-resources.s3.amazonaws.com/fontawesome-icons/css/regular.min.css"
+        rel="stylesheet">
+    <link href="https://trvsolutions-customer-resources.s3.amazonaws.com/fontawesome-icons/css/solid.min.css"
+        rel="stylesheet">
+    <link href="https://trvsolutions-customer-resources.s3.amazonaws.com/fontawesome-icons/css/v5-font-face.min.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+</head>
+
+<body onload="startGame()">
+    <section class="hero is-black is-fullheight is-relative is-hidden-mobile">
+        <div class="heroImage">
+            <img src="assets/background.png" alt="">
+        </div>
+        <div class="heroOverlay"></div>
+
+        <div class="container has-text-centered">
+            <div id="containerGame">
+                <h4 class="title">Try to guess the word based on the following emojis!</h4>
+
+                <h1 class="title is-1 mb-2 animate__animated animate__pulse animate__slow animate__infinite"
+                    id="gameEmoji"></h1>
+                <div class="columns is-centered mb-0" id="gameWords"></div>
+                <p class="is-size-6">Hint: <b><span id="gameHint"></span></b></p>
+
+                <a class="button is-primary is-hidden" id="newWordBtn" href="/CrackTheEmoji"><i
+                        class="fa-solid fa-arrows-rotate"></i> New word</a>
+            </div>
+
+            <div class="is-hidden" id="containerWinner">
+                <div class="columns">
+                    <div class="column">
+                        <h4 class="title">You guessed the word!</h4>
+
+                        <h1 class="title is-1 mb-2 animate__animated animate__pulse animate__slow animate__infinite"
+                            id="gameEmoji2"></h1>
+                        <h4 class="title animate__animated animate__pulse animate__slow animate__infinite"
+                            id="gameEndWord"></h4>
+                    </div>
+
+                    <div class="column is-one-third">
+                        <div class="animate__animated animate__fadeIn" style="animation-delay: 2s;">
+                            <div class="p-3" style="background-color: rgba(204, 82, 0, 0.4); border-radius: .75rem;">
+                                <h4 class="subtitle mb-1">Don't forget to join our Discord!</h4>
+
+                                <figure class="image is-1by1 mx-auto" style="width: 60%;">
+                                    <img src="assets/discord-qr.png" alt="CSM Computer Science Club Discord QR Code"
+                                        style="border-radius: 1rem;">
+                                </figure>
+
+                                <a class="button is-primary is-light is-fullwidth mt-2" href="/CrackTheEmoji"><i
+                                        class="fa-solid fa-arrows-rotate"></i> Play again</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="overlay" id="overlayWrongWord">
+        <div class="loaderBox has-text-danger">
+            <div class="imgProcessing"><i class="fa-solid fa-circle-xmark fa-6x"></i></div>
+            <h3 class="subtitle mt-1 has-text-danger">Incorrect word, try again</h3>
+        </div>
+    </div>
+
+    <section class="is-hidden-tablet">
+        <div class="smallBox box mt-5 has-text-centered">
+            <i class="fa-fw fas fa-mobile-screen-button fa-5x mb-1"></i>
+            <h1 class="title">Game not optimized for mobile</h1>
+            <p class="subtitle">Open it on a tablet or computer</p>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="include/emojis.js"></script>
+    <script type="text/javascript" src="include/game.js"></script>
+</body>
+
+</html>

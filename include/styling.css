@@ -1,0 +1,410 @@
+@import url('bulma-modifications.css');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+body,
+html {
+	font-family: "Courier Prime", monospace;
+	background-color: var(--bulma-primary-05);
+	scroll-behavior: smooth;
+}
+
+input[type=file] {
+	border: 2px dashed var(--bulma-primary);
+	border-radius: 6px;
+	padding: 3rem;
+	width: 100%;
+}
+
+.fas,
+.far,
+.fab,
+.fa-solid,
+.fa-regular,
+.fa-brands {
+	margin: auto 0.25rem;
+}
+
+.smallBox {
+	width: 40%;
+	margin: auto;
+	margin-bottom: 0.5rem;
+}
+
+/* Modal */
+.trvModal {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(25, 25, 26, 0.3);
+	z-index: 40;
+}
+
+.trvModal-content {
+	position: relative;
+	color: var(--bulma-on-scheme);
+	background-color: var(--bulma-primary-10);
+	border: 2px solid var(--bulma-primary-10-invert);
+	margin: 5% auto;
+	width: 60%;
+	border-radius: 6px;
+	-webkit-animation: enter-top 0.5s ease-out;
+	animation: enter-top 0.5s ease-out;
+}
+
+.trvModal-content-small {
+	width: 40%;
+}
+
+.trvModal-content .delete:first-child {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+}
+
+.trvModal-header {
+	width: 100%;
+	text-align: center;
+	background-color: var(--bulma-primary-15);
+	border-bottom: 2px solid var(--bulma-primary-15-invert);
+	border-radius: 6px 6px 0 0;
+}
+
+/* Color avatar */
+.categoryColorImage {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	text-align: center;
+	vertical-align: middle;
+	font-size: 28px;
+	position: relative;
+	border: .23rem solid var(--bulma-primary-soft);
+	background-color: var(--bulma-primary-dark);
+	color: var(--bulma-white);
+}
+
+.optionsBox.inverted .categoryColorImage {
+	background-color: var(--bulma-primary-15);
+	border: .23rem solid var(--bulma-primary-30);
+}
+
+.optionsBox.special .categoryColorImage {
+	background-color: #1b2631;
+	border: .23rem solid #34495E;
+}
+
+.categoryColorImage span {
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cardFloatingIconImg {
+	position: absolute;
+	top: -1rem;
+	left: 50%;
+	transform: translatex(-50%);
+}
+
+.hero .container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 90vw;
+	z-index: 4;
+}
+
+.heroImage {
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+}
+
+.heroImage img {
+	overflow: hidden;
+	width: 100%;
+	height: auto;
+	scale: 1.3;
+	animation: bgMove 40s ease-in-out infinite;
+}
+
+
+.heroOverlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(204, 82, 0, 0.15);
+	z-index: 2;
+}
+
+/* Loading Screen */
+.overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 40;
+	text-align: center;
+	color: #fff;
+	-webkit-animation: fade 0.3s ease-in-out;
+	animation: fade 0.3s ease-in-out;
+}
+
+.overlay .imgProcessing {
+	width: 60%;
+	margin: auto;
+}
+
+.overlay .loaderBox {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.centeredResults {
+	width: 80%;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -40%);
+}
+
+.floatingImage {
+	width: 100%;
+	height: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.optionsBox {
+	background-color: var(--bulma-primary-soft);
+	padding-top: 3.5rem;
+}
+
+.optionsBox.inverted {
+	background-color: var(--bulma-primary-30);
+}
+
+.optionsBox.special {
+	background-color: #34495E;
+}
+
+#resultsDevAlias span:last-child {
+	color: var(--bulma-primary);
+}
+
+/* Animations */
+.fade {
+	-webkit-animation: fade 0.5s ease-in-out;
+	animation: fade 0.5s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fade {
+	from {
+		opacity: 0.4;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.elementHover {
+	transition: scale .2s;
+}
+
+.elementHover:hover {
+	scale: 1.1;
+}
+
+canvas{
+	z-index: 10!important;
+}
+
+/* Taken from https://jsfiddle.net/psullivan6/ma6e78m0/ */
+@-webkit-keyframes twinkle1 {
+	0% {
+		opacity: 1;
+	}
+
+	30% {
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes twinkle1 {
+	0% {
+		opacity: 1;
+	}
+
+	30% {
+		opacity: 1;
+	}
+
+	70% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes twinkle2 {
+	0% {
+		opacity: 1;
+	}
+
+	25% {
+		opacity: 0;
+	}
+
+	80% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes twinkle2 {
+	0% {
+		opacity: 1;
+	}
+
+	25% {
+		opacity: 0;
+	}
+
+	80% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes twinkle3 {
+	0% {
+		opacity: 1;
+	}
+
+	30% {
+		opacity: 0;
+	}
+
+	40% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes twinkle3 {
+	0% {
+		opacity: 1;
+	}
+
+	30% {
+		opacity: 0;
+	}
+
+	40% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes bgMove {
+	0% {
+		scale: 1.3;
+	}
+
+	50% {
+		scale: 1.6;
+	}
+
+	70% {
+		scale: 1.6;
+	}
+
+	90% {
+		scale: 1.3;
+	}
+}
+
+@keyframes bgMove {
+	0% {
+		scale: 1.3;
+	}
+
+	50% {
+		scale: 1.6;
+	}
+
+	70% {
+		scale: 1.6;
+	}
+
+	90% {
+		scale: 1.3;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.smallBox {
+		width: auto;
+	}
+
+	.trvModal-content {
+		width: 95%;
+	}
+
+	.trvModalButtons {
+		flex-direction: column-reverse;
+		display: flex;
+	}
+}

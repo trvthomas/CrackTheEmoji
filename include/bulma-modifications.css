@@ -1,0 +1,40 @@
+	button.pcr-button {
+		width: 100% !important;
+		border: 1px solid var(--bulma-primary-dark);
+	}
+
+	.input:active,
+	.input:focus,
+	.is-active.input,
+	.is-active.textarea,
+	.is-focused.input,
+	.is-focused.textarea,
+	.select select.is-active,
+	.select select.is-focused,
+	.select select:active,
+	.select select:focus,
+	.textarea:active,
+	.textarea:focus {
+		border-color: var(--bulma-primary-light);
+	}
+
+	.select select:focus,
+	.input:focus,
+	.textarea:focus,
+	.select select:focus-within,
+	.input:focus-within,
+	.textarea:focus-within,
+	.select select.is-focused,
+	.is-focused.input,
+	.is-focused.textarea {
+		box-shadow: var(--bulma-input-focus-shadow-size) hsla(var(--bulma-primary-h), var(--bulma-primary-s), var(--bulma-primary-l), var(--bulma-input-focus-shadow-alpha));
+	}
+
+	.button {
+		border-color: transparent !important;
+	}
+
+	.panel-heading {
+		background-color: var(--bulma-primary-bold);
+		color: var(--bulma-primary-soft);
+	}
